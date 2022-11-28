@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<style>
+  .box {
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    background-color: skyblue;
+  }
+
+  .User {
+    margin-top: 20px;
+  }
+  .Url {
+    width: 50px;
+    height: 50px;
+  }
+</style>
+<html>
+  <body>
+    <div>
+      <h1>聊天室</h1>
+      <h2>一些介绍：https://chovrio.club/chatroom/</h2>
+      <div class="box">
+        <input type="text" />
+        <button>发送消息</button>
+      </div>
+    </div>
+    <script>
+      const ws = new WebSocket("ws://chatroom.chovrio.club/"); // 监听地址端口号
+      // 建立连接后
+      ws.onopen = function () {
+        console.log("服务器连接");
+      };
+      // 服务器发送数据后
+      ws.onmessage = ({ data }) => {
+        const resData = JSON.parse(data);
+        console.log("服务端发过来数据", resData);
+        const div = document.createElement("div");
+        div.className = "User";
+        const img = document.createElement("img");
+        img.className = "Url";
+        img.src = resData.url;
+        const name = document.createElement("div");
+        name.innerHTML = resData.nickname;
+        div.append(name);
+        div.append(img);
+        document.querySelector(".box").append(div);
+      };
+      // 服务器关闭后
+      ws.onclose = () => {
+        console.log("服务器关闭");
+      };
+      // 昵称修改
+      function nickUpdateClick(name) {
+        if (ws.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify(name));
+        }
+      }
+
+      // 发送消息
+      function sendMessageClick(msg) {
+        if (ws.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify(msg));
+        }
+      }
+
+      document.querySelector("button").addEventListener("click", () => {
+        console.log(111);
+        sendMessageClick(document.querySelector("input").value);
+      });
+    </script>
+  </body>
+</html>
