@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>小游戏</title>
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+  <script>
+    // 获取 canvas 元素
+    const canvas = document.getElementById('game-canvas');
+    // 获取 canvas 上下文
+    const ctx = canvas.getContext('2d');
+
+    // 定义游戏变量
+    let x = 50;
+    let y = 50;
+    let dx = 5;
+    let dy = 5;
+
+    // 定义游戏循环函数
+    function gameLoop() {
+      // 清空画布
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // 绘制小球
+      ctx.beginPath();
+      ctx.arc(x, y, 10, 0, Math.PI * 2);
+      ctx.fill();
+      // 更新小球位置
+      x += dx;
+      y += dy;
+      // 判断是否到达边界
+      if (x < 10 || x > canvas.width - 10) {
+        dx = -dx;
+      }
+      if (y < 10 || y > canvas.height - 10) {
+        dy = -dy;
+      }
+      // 使用 requestAnimationFrame 函数重复执行游戏循环
+      requestAnimationFrame(gameLoop);
+    }
+
+    // 启动游戏循环
+    gameLoop();
+  </script>
+</body>
+</html>

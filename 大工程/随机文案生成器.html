@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>随机文案生成器</title>
+</head>
+<body>
+  <h1>随机文案生成器</h1>
+  <button id="generate-button">生成文案</button>
+  <p id="text"></p>
+  <script>
+    const texts = [
+      "今天天气不错",
+      "明天会下雨",
+      "吃了一个苹果",
+      "喝了一杯咖啡",
+      "正在学习 JavaScript"
+    ];
+
+    document.getElementById('generate-button').addEventListener('click', () => {
+      const text = texts[Math.floor(Math.random() * texts.length)];
+      document.getElementById('text').textContent = text;
+    });
+  </script>
+</body>
+</html>

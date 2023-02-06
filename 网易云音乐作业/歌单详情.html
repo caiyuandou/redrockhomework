@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="./2.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌单</title>
+</head>
+<body>
+    <div class="page_main R_page" id="pageMain">
+		<div class="main_container">
+			<div class="listcontainer">
+				<div class="listinfo clearfix">
+					<div class="info_listpic">
+						<img src="./src/images/temp_pic001.jpg" alt="" id="playlist_listPic" />
+					</div>
+					<div class="info_detailtext">
+						<div class="playinfo">
+							<span><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;<span id="playlist_trackCount">0</span></span>
+							<span><i class="fa fa-play-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;<span id="playlist_playCount">0</span></span>
+						</div>
+						<div class="detail_name">
+							<span class="listtag">歌单</span>
+							<span class="listname" id="playlist_listName">歌单名称</span>
+						</div>
+						<div class="detail_time">
+							<span class="userpic"><a href="javascript:void(0);"><img src="./src/images/user_face.png" alt="" id="playlist_userFace" /></a></span>
+							<span class="username"><a href="javascript:void(0);" id="playlist_userName">user008</a></span>
+							<span class="createtime" id="playlist_createTime">1970-01-01</span>
+							<span>创建</span>
+						</div>
+						<div class="detail_btns">
+							<span class="btn playall"><i class="fa fa-play-circle-o" aria-hidden="true" style="color:#c52f30;"></i>&nbsp;&nbsp;播放全部</span>
+							<!--
+							--><span class="btn plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
+							<span class="btn playall"><i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;收藏(0)</span>
+							<span class="btn playall"><i class="fa fa-share-square-o" aria-hidden="true"></i>&nbsp;&nbsp;分享(0)</span>
+							<span class="btn playall"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;下载全部</span>
+						</div>
+					</div>
+				</div>
+				<div class="listtab">
+					<div class="tabbtns clearfix">
+						<label class="label_btn active" for="music" class="active">歌单列表</label>
+						<label class="label_btn" for="comment">评论(0)</label>
+						<label class="label_btn" for="follower">收藏者</label>
+						<span class="menu_search">
+							<input type="text" placeholder="搜索歌单音乐" class="search_inp" />
+							<span class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></span>
+						</span>
+					</div>
+					
+					<input type="radio" id="music" name="tablist" checked="" />
+					<div class="tabitem musiclist">
+						<table>
+							<thead>
+								<tr>
+									<th>&nbsp;&nbsp;</th>
+									<th>操作</th>
+									<th>音乐标题</th>
+									<th>歌手</th>
+									<th>专辑</th>
+									<th>时长</th>
+								</tr>
+							</thead>
+							<tbody class="infolist" id="infoList_playlist">
+								<tr>
+									<td class="index">01</td>
+									<td><i class="fa fa-heart-o" aria-hidden="true"></i>&nbsp;
+										<i class="fa fa-download" aria-hidden="true"></i>
+									</td>
+									<td>-SONGNAME-</td>
+									<td>-SINGER-</td>
+									<td>-ALBUM-</td>
+									<td>00:00</td>
+								</tr>
+							</tbody>
+							</tfoot>
+						</table>
+					</div>
+					
+					<input type="radio" id="comment" name="tablist" />
+					<div class="tabitem commentlist">
+						<div class="commentbox clearfix">
+							<textarea name="" id="" cols="30" rows="10" maxlength="140"></textarea>
+							<span class="wordslen">140</span>
+							<a href="javascript:void(0);" class="btn emoji"><i class="fa fa-smile-o" aria-hidden="true"></i></a>
+							<a href="javascript:void(0);" class="btn at"><i class="fa fa-at" aria-hidden="true"></i></a>
+							<a href="javascript:void(0);" class="btn comment">评论</a>
+						</div>
+						<div class="commenttable">
+							<div class="comment new">
+								<div class="title">最新评论(0)</div>
+								<div class="content">
+									<p><span class="username"><a href="javascript:void(0);">用户008</a></span>：<span class="usersay">
+											</span></p>
+									<div class="btngroups clearfix">
+										<span class="time"></span>
+										<span class="btn">
+											<a href="javascript:void(0);" class="btn_report">举报</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+											<a href="javascript:void(0);" class="btn_support"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>(0)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+											<a href="javascript:void(0);" class="btn_share">分享</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+											<a href="javascript:void(0);" class="btn_reply">回复</a>
+										</span>
+									</div>
+									<div class="userface"><a href="javascript:void(0);"><img src="./src/images/user_face.png" alt="" /></a></div>
+								</div>
+								<div class="content">
+									<p><span class="username"><a href="javascript:void(0);">用户</a></span>：<span class="usersay"></span></p>
+									<div class="btngroups clearfix">
+										<span class="time"></span>
+										<span class="btn">
+											<a href="javascript:void(0);" class="btn_report">举报</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+											<a href="javascript:void(0);" class="btn_support"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>(0)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+											<a href="javascript:void(0);" class="btn_share">分享</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+											<a href="javascript:void(0);" class="btn_reply">回复</a>
+										</span>
+									</div>
+									<div class="userface"><a href="javascript:void(0);"><img src="./src/images/user_face.png" alt="" /></a></div>
+								</div>
+							</div>
+							<div class="comment prefect">
+								<div class="title">精彩评论(0)</div>
+								<div class="content">
+									<p style="color:#ccc;">-- 暂无评论 --</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

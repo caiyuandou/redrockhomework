@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.main-content {
+  padding: 20px;
+  margin-left: 220px;
+}
+
+#favorites-list, #playlists-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#favorites-list li, #playlists-list li {
+  margin-bottom: 10px;
+}
+
+.current-song {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#song-name {
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: lightblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+    </style>
+  <meta charset="UTF-8">
+  <title>My Music App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h3>My Music</h3>
+    <div class="favorites">
+      <h4>Favorites</h4>
+      <ul id="favorites-list">
+        <li><a href="#">Song 1</a></li>
+        <li><a href="#">Song 2</a></li>
+        <li><a href="#">Song 3</a></li>
+      </ul>
+    </div>
+    <div class="playlists">
+      <h4>My Playlists</h4>
+      <ul id="playlists-list">
+        <li><a href="#">Playlist 1</a></li>
+        <li><a href="#">Playlist 2</a></li>
+        <li><a href="#">Playlist 3</a></li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content">
+    <h2>Now Playing</h2>
+    <div class="current-song">
+      <p id="song-name">Song 1</p>
+      <button id="previous-button">Previous</button>
+      <button id="play-pause-button">Play</button>
+      <button id="next-button">Next</button>
+    </div>
+  </main>
+
+</body>
+</html>

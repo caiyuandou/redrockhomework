@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>求签程序</title>
+</head>
+<body>
+  <h1>求签程序</h1>
+  <input type="text" id="question">
+  <button id="ask-button">求签</button>
+  <p id="answer"></p>
+  <script>
+    document.getElementById('ask-button').addEventListener('click', () => {
+      const answers = [
+        '大吉',
+        '中吉',
+        '小吉',
+        '吉',
+        '末吉',
+        '凶',
+        '大凶'
+      ];
+      const answer = answers[Math.floor(Math.random() * answers.length)];
+      document.getElementById('answer').textContent = answer;
+    });
+  </script>
+</body>
+</html>
