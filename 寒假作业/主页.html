@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="./1.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐</title>
+</head>
+<body>
+    <div class="dingbu" style="height: 60px; width: 2550px;     background-color: red;">
+    <div class="logo"><img src="./logo.png" style="height: 60px; position: absolute;"     >   </div>
+    <div class="sousuo">
+        <input type="text" class="text" placeholder="I really want to stat at your house";  
+         style="height:30px;position:relative;left: 200px;top:15px;border-radius: 32px; border: 1px solid #242424;color: #9b9b9b;">   
+    </div>
+    <div class="touxiang"><img src="./touxiang.jpg" style="height:50px;position:relative;left:400px;bottom: 29px; border-radius: 50%;"         >           </div>
+ <div class="nicheng" style="position:relative;left:500px;bottom: 69px;color: #9b9b9b;   ">caiyuandou</div>
+</div>
+<div class="shouye">
+    <div id="slider">
+        <img src="lunbo1.jpg" alt="image1" style="height:300px ;width: 800px;"              >
+        <img src="lunbo2.jpg" alt="image2"style="height:300px ;width: 800px;"  >
+        <img src="lunbo3.jpg" alt="image3"style="height:300px ;width: 800px;"  >
+        <img src="lunbo4.jpg" alt="image4"style="height:300px ;width: 800px;"  >
+        <img src="lunbo5.jpg" alt="image5"style="height:300px ;width: 800px;"  >
+        <img src="lunbo6.jpg" alt="image6"style="height:300px ;width: 800px;"  >
+        <img src="lunbo7.jpg" alt="image7"style="height:300px ;width: 800px;"  >
+        
+    
+      </div>
+      
+      <button id="prev"><img src="./zuo.png"></button>
+      <button id="next"><img src="you.png"></button>
+<div class="tuijiangedan">
+<div id="推荐歌单">推荐歌单</div>
+<img src="./1.png"style="height: 200px;width: 200px;position: relative;left: 400px;top: 30px;"><a id="每日歌曲推荐" href="">每日歌曲推荐</a>
+<img src="./2.png"style="height: 200px;width: 200px;position: relative;left: 320px;top: 30px;"><a id="惬意慢时光致忙里偷闲的日与月" href="">惬意慢时光|致忙里偷闲的日与月</a>
+<img src="./3.png"style="height: 200px;width: 200px;position:relative;left: 110px;top: 30px; "><a id="今天从听起" href="">今天从《last reunion》听起|私人雷达</a>
+<img src="./4.png"style="height: 200px;width: 200px;position: relative;right:140px;top:30px"><a id="值得单曲循环的粤语歌曲" href="">【粤语精选】 值得单曲循环的粤语歌曲</a>
+<img src="./5.png"style="height: 200px;width: 200px;position: relative;bottom:175px;left:1230px      "><a id="超级好听的粤语歌经典" href="">超级好听的粤语歌经典</a>
+<img src="./6.png"style="height: 200px;width: 200px;position: relative;top:60px;right:35px"><a id="打游戏超火的英文歌巨燃战歌" href="">打游戏超火的英文歌 巨燃战歌</a>
+<img src="./7.png"style="height: 200px;width: 200px;position: relative;top:60px;right: 230px;"      ><a id="最懂你的欧美推荐每日更新35首" href="">【欧美私人订制】最懂你的欧美推荐 每日更新35首</a>
+<img src="./8.png"style="height: 200px;width: 200px;position: relative;top:60px; right:573px"><a id="超好听的欧美热门歌曲" href="">【旋律控】超好听的欧美热门歌曲</a>
+<img src="./9.png"style="height: 200px;width: 200px;position: relative;bottom:145px;left:825px"><a id="震撼人心的史诗音乐" href="">震撼人心的史诗音乐</a>
+<img src="./10.png"style="height: 200px;width: 200px;position: relative;bottom:145px;left:705px"><a id="Top50神级背景音乐首首震撼心魄" href="">Top50.神级背景音乐！首首震撼心魄！</a>
+</div>
+</div>
+<div class="侧边栏">
+<h3 href=" ">发现音乐</h3>
+<h4>播客</h4>
+<h4>视频</h4>
+<h4>关注</h4>
+<h4>直播</h4>
+<h4>私人FM</h4>
+<a href="./歌单详情.html" id="yinyue">我喜欢的音乐</a>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script>
+    const images = document.querySelectorAll('#slider img');
+const prev = document.querySelector('#prev');
+const next = document.querySelector('#next');
+let current = 0;
+
+function slider(index) {
+  // 将所有图片的 display 设置为 'none'
+  images.forEach(image => {
+    image.style.display = 'none';
+  });
+  // 将当前图片的 display 设置为 'block'
+  images[index].style.display = 'block';
+}
+prev.addEventListener('click', () => {
+    current--;
+    if (current < 0) {
+      current = images.length - 1;
+    }
+    slider(current);
+  });
+  
+  next.addEventListener('click', () => {
+    current++;
+    if (current >= images.length) {
+      current = 0;
+    }
+    slider(current);
+  });
+  setInterval(() => {
+    next.click();
+  }, 1000);
+      
+  </script>
+
+</html>

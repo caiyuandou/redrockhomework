@@ -1,0 +1,123 @@
+<html>
+<head>
+  <title>歌单详情</title>
+  <style>
+    /* 样式 */
+    #playlist-info {
+      text-align: center;
+    }
+
+    #song-list table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #song-list th, #song-list td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    #comments {
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    #comment-list .comment {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    #comment-form {
+      margin-top: 20px;
+    }
+
+    #comment-form textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+    }
+
+    #pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #pagination a {
+      padding: 8px;
+      text-decoration: none;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- 歌单信息 -->
+  <div id="playlist-info">
+    <h2>歌单名称</h2>
+    <p>歌单描述</p>
+    <p>创建者信息</p>
+  </div>
+
+  <!-- 歌曲列表 -->
+  <div id="song-list">
+    <table>
+      <tr>
+        <th>歌曲名称</th>
+        <th>歌手</th>
+      </tr>
+      <tr>
+        <td><a href="#" onclick="playSong(1)">歌曲 1</a></td>
+        <td>歌手 1</td>
+      </tr>
+      <tr>
+        <td><a href="#" onclick="playSong(2)">歌曲 2</a></td>
+        <td>歌手 2</td>
+      </tr>
+      <!-- ... -->
+    </table>
+  </div>
+
+  <!-- 评论 -->
+  <div id="comments">
+    <h2>评论</h2>
+    <div id="comment-list">
+      <!-- 已有评论 -->
+      <div class="comment">
+        <p>评论者信息</p>
+        <p>评论内容</p>
+        <a href="#" onclick="reply(1)">回复</a>
+      </div>
+      <!-- ... -->
+    </div>
+    <form id="comment-form">
+      <!-- 发表评论 -->
+      <textarea id="comment-text"></textarea>
+      <input type="button" value="发表评论" onclick="submitComment()">
+    </form>
+
+    <!-- 分页 -->
+    <div id="pagination">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <!-- ... -->
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function playSong(songId) {
+      // 点击播放歌曲
+    }
+
+    function reply(commentId) {
+      // 回复评论
+    }
+
+    function submitComment() {
+      // 发表评论
+    }
+  </script>
+</body>
+</html>
+
