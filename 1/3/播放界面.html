@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="./1.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dingbu" style="height: 60px; width: 2550px;     background-color: red;">
+        <div class="logo"><img src="./logo.png" style="height: 60px; position: absolute;"     >   </div>
+        <div class="sousuo">
+            <input type="text" class="text" placeholder="I really want to stat at your house";  
+             style="height:30px;position:relative;left: 200px;top:15px;border-radius: 32px; border: 1px solid #242424;color: #9b9b9b;">   
+        </div>
+        <div class="touxiang"><img src="./touxiang.jpg" style="height:50px;position:relative;left:400px;bottom: 29px; border-radius: 50%;"         >           </div>
+     <div class="nicheng" style="position:relative;left:500px;bottom: 69px;color: #9b9b9b;   ">caiyuandou</div>
+    </div>
+    <div class="page_main R_page" id="pageMain">
+		<div class="main_container">
+			<div class="listcontainer">
+				<div class="listinfo clearfix">
+					<div class="info_detailtext">
+						<div class="playinfo">
+							<span><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;<span id="playlist_trackCount">0</span></span>
+							<span><i class="fa fa-play-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;<span id="playlist_playCount">0</span></span>
+						</div>
+						<div class="detail_name">
+							<span class="listtag">歌单</span>
+							<span class="listname" id="playlist_listName">歌单名称</span>
+						</div>
+						<div class="detail_time">
+							
+							<span class="username"><a href="javascript:void(0);" id="playlist_userName">user008</a></span>
+							<span class="createtime" id="playlist_createTime">2023-01-01</span>
+							<span>创建</span>
+						</div>
+						<div class="detail_btns">
+							<span class="btn playall"><i class="fa fa-play-circle-o" aria-hidden="true" style="color:#c52f30;"></i>&nbsp;&nbsp;播放全部</span>
+							<span class="btn plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
+							<span class="btn playall"><i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;收藏(0)</span>
+							<span class="btn playall"><i class="fa fa-share-square-o" aria-hidden="true"></i>&nbsp;&nbsp;分享(0)</span>
+							<span class="btn playall"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;下载全部</span>
+						</div>
+					</div>
+				</div>
+				<div class="listtab">
+					<div class="tabbtns clearfix">
+						<label class="label_btn active" for="music" class="active">歌单列表</label>
+						<label class="label_btn" for="comment">评论(0)</label>
+						<label class="label_btn" for="follower">收藏者</label>
+						<span class="menu_search">
+							<input type="text" placeholder="搜索歌单音乐" class="search_inp" />
+							<span class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></span>
+						</span>
+					</div>
+                    <div class="page_playerbar clearfix">
+                        <!-- 播放控制按钮组 -->
+                        <div class="playerbar_playbtngroup" id="playBtnGroup">
+                            <div class="btn prev"><i class="fa fa-step-backward" aria-hidden="true"></i></div>
+                            <div class="btn play"><i class="fa fa-play" aria-hidden="true"></i></div>
+                            <div class="btn next"><i class="fa fa-step-forward" aria-hidden="true"></i></div>
+                        </div>
+                        <!-- 进度条 -->
+                        <div class="playerbar_timeprogress">
+                            <div class="progress" id="progress_box">
+                                <div class="progress_cache" id="progress_cache">
+                                    <!-- 缓冲条 -->
+                                </div>
+                                <div class="progress_curbar" id="progress_bar">
+                                    <div class="curbar_arc" id="progress_arc"></div>
+                                </div>
+                                <div class="time start" id="audio_currentTime">00:00</div>
+                                <div class="time end" id="audio_duration">59:59</div>
+                            </div>
+                        </div>
+                        <!-- 其他控制按钮组 -->
+                        <div class="playerbar_others">
+                            <div class="volume">
+                                <div class="mutebtn" id="muteBtn" title="静音"><i class="fa fa-volume-up" aria-hidden="true"></i></div>
+                                <div class="progress" id="vol_progress_box">
+                                    <div class="progress_curbar" id="vol_progress_bar">
+                                        <div class="curbar_arc" id="vol_progress_arc"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+    <script>
+        
+    </script>
+</body>
+</html>

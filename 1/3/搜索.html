@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #songList li {
+  cursor: pointer;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="searchInput">
+<button id="searchButton">Search</button>
+
+<ul id="songList"></ul>
+<div id="hotSearch"></div>
+<script>const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const songList = document.getElementById('songList');
+    const hotSearch = document.getElementById('hotSearch');
+    
+    let currentSongIndex = null;
+    let songs = [];
+    
+    searchButton.addEventListener('click', () => {
+      const searchTerm = searchInput.value;
+      
+      songList.innerHTML = songs.map((song, index) => {
+        return `<li onclick="playSong(${index})">${song.title}</li>`;
+      }).join('');
+    });
+    
+    function playSong(index) {
+      currentSongIndex = index;
+     
+    }
+    
+    function prevSong() {
+      if (currentSongIndex === null || currentSongIndex === 0) {
+        return;
+      }
+      playSong(currentSongIndex - 1);
+    }
+    
+    function nextSong() {
+      if (currentSongIndex === null || currentSongIndex === songs.length - 1) {
+        return;
+      }
+      playSong(currentSongIndex + 1);
+    }
+    
+    
+    hotSearch.innerHTML = hotSearchItems.map((item) => {
+      return `<div onclick="searchInput.value='${item}'; searchButton.click();">${item}</div>`;
+    }).join('');
+    </script>
+</body>
+</html>
+
+
+

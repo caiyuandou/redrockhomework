@@ -1,0 +1,401 @@
+#slider {
+	position: relative;
+	width: 660px;
+	height: 300px;
+	margin: auto;
+    text-align: center;
+    right: 75px;
+  }
+  
+  #slider img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+    text-align: center;
+  }
+  
+ #prev {
+    position: relative;
+	background-color: #ddd;
+	border: none;
+	color: #111;
+	cursor: pointer;
+	font-size: 18px;
+    left:396px;
+    bottom:150px;
+  }
+  #next{ 
+    position: relative;
+	background-color: #ddd;
+	border: none;
+	color: #111;
+	cursor: pointer;
+	font-size: 18px;
+    left:1190px;
+    bottom:150px;
+}
+#推荐歌单{
+    margin-left: 400px;
+	position: absolute;
+}
+#每日歌曲推荐{
+	position: relative;
+	left:250px;
+	top:50px}
+#惬意慢时光致忙里偷闲的日与月{
+position: relative;
+top:50px;
+left:100px;
+}
+#今天从听起{
+	position: relative;
+	top:50px;
+right:90px;
+}
+#值得单曲循环的粤语歌曲{
+	position: relative;
+	top:50px;
+	right:300px;
+}
+#超级好听的粤语歌经典{
+	position: relative;
+	bottom:155px;
+	left:1060px;
+}
+#打游戏超火的英文歌巨燃战歌{
+	position: relative;
+	top:90px;
+	right: 240px;
+}
+#最懂你的欧美推荐每日更新35首{
+	position: relative;
+	top:90px;
+	right: 450px;
+}
+#超好听的欧美热门歌曲{
+	position: relative;
+	bottom:115px;
+	left: 800px;
+}
+#震撼人心的史诗音乐{
+	position: relative;
+	bottom:115px;
+	left:650px;
+}
+#Top50神级背景音乐首首震撼心魄{
+	position: relative;
+	bottom:115px;
+	left:500px;
+}
+h3{
+
+	position: relative;
+	bottom:900px;
+}
+h4{
+	position: relative;
+	bottom:900px;
+}
+h5{
+	
+		position: relative;
+		bottom:900px;
+	
+}
+#yinyue{
+	position: relative;
+		bottom:900px;
+}
+.page_playerbar{
+	position:fixed;
+	bottom:0;left:0;
+	width:100%;
+	height:60px;
+	border-top:1px solid #dadadc;
+	background-color:#f6f6f8;
+	z-index:9;
+}
+
+.playerbar_playbtngroup{
+	float:left;
+	width:220px;
+	height:100%;
+	text-align:center;
+}
+.playerbar_playbtngroup>.btn{
+	display:inline-block;
+	width:40px;
+	height:40px;
+	margin-left:16px;
+	border-radius:50%;
+	position:relative;
+	top:50%;left:0;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+	background-color:#c52f30;
+	color:#f7f7f7;
+	cursor:pointer;
+}
+.playerbar_playbtngroup>.btn.play{
+	width:44px;
+	height:44px;
+}
+.playerbar_playbtngroup>.btn>.fa{
+	position:relative;
+	top:50%;left:0;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+	font-size:1rem;
+	font-weight:lighter;
+}
+.playerbar_others{
+	float:right;
+	height:100%;
+}
+.playerbar_others>.volume{
+	position:relative;
+	top:50%;left:0;
+	margin:0 15px;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+}
+.playerbar_others>.volume>div{
+	display:inline-block;
+	margin:0 5px;
+}
+.playerbar_others>.volume>.mutebtn{
+	cursor:pointer;
+}
+.playerbar_others>.volume>.mutebtn>.fa{
+	font-weight:lighter;
+	font-size:1rem;
+	color:#656567;
+}
+.playerbar_others>.volume>.mutebtn:hover>.fa{
+	color:#111;
+}
+.playerbar_others>.volume>.progress,
+.playerbar_timeprogress>.progress{
+	position:relative;
+	top:50%;left:0;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+	width:150px;
+	height:6px;
+	border-radius:5px;
+	background-color:#cbcfd1;
+}
+.volume>.progress>.progress_curbar,
+.playerbar_timeprogress>.progress>.progress_curbar{
+	position:absolute;
+	top:0;left:0;
+	width:0;
+	height:100%;
+	border-radius:5px;
+	background-color:#e73d3d;
+}
+.volume>.progress>.progress_curbar>.curbar_arc,
+.playerbar_timeprogress>.progress>.progress_curbar>.curbar_arc{
+	position:absolute;
+	top:50%;left:100%;
+	width:14px;
+	height:14px;
+	border-radius:50%;
+	box-shadow:0 0 2px #bbb;
+	-webkit-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	background-color:#fff;
+	cursor:pointer;
+}
+.volume>.progress>.progress_curbar>.curbar_arc:after,
+.playerbar_timeprogress>.progress>.progress_curbar>.curbar_arc:after{
+	content:"";
+	position:absolute;
+	top:50%;left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	width:6px;
+	height:6px;
+	border-radius:50%;
+	background-color:#c52f30;
+}
+.volume>.progress>.progress_curbar>.curbar_arc:hover,
+.playerbar_timeprogress>.progress>.progress_curbar>.curbar_arc:hover{
+	box-shadow:0 0 5px rgba(0,0,0,0.3);
+}
+
+.volume>.progress>.progress_curbar>.curbar_arc{
+	visibility:hidden;
+}
+.volume>.progress:hover>.progress_curbar>.curbar_arc{
+	visibility:visible;
+}
+
+.playerbar_timeprogress>.progress>.progress_cache{
+	position:absolute;
+	top:0;left:0;
+	width:0;
+	height:100%;
+	background-color:#ababab;
+	-webkit-transition:width ease 0.5s;
+	transition:width ease 0.5s;
+}
+.playerbar_timeprogress{
+	float:left;
+	width:calc(100% - 220px - 150px - 150px);
+	height:100%;
+}
+.playerbar_timeprogress>.progress{
+	width:85%;
+	margin:0 auto;
+}
+.playerbar_timeprogress>.progress>.time{
+	position:absolute;
+	top:50%;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+}
+.playerbar_timeprogress>.progress>.start{
+	right:101%;
+}
+.playerbar_timeprogress>.progress>.end{
+	left:101%;
+}
+
+.R_page{
+	padding:60px 0 60px 220px;
+	height:100%;
+	box-sizing:border-box;
+}
+.R_page>.main_container{
+	height:100%;
+	overflow-y:scroll;
+}
+.listcontainer{
+	width:100%;
+	overflow:hidden;
+}
+.listcontainer>.listinfo{
+	padding:20px 40px;
+	margin-bottom:30px;
+}
+.listcontainer>.listinfo>.info_listpic{
+	float:left;
+	width:200px;
+	margin-right:40px;
+	position:relative;
+}
+.listcontainer>.listinfo>.info_listpic>img{
+	width:100%;
+	height:auto;
+}
+.listcontainer>.listinfo>.info_detailtext{
+	float:left;
+	width:calc(100% - 200px - 40px);
+	position:relative;
+}
+.listcontainer>.listinfo>.info_detailtext>.playinfo{
+	position:absolute;
+	top:0;right:0;
+}
+.listcontainer>.listinfo>.info_detailtext>.playinfo>span{
+	margin:0 5px;
+	color:#646464;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_name>.listtag{
+	display:inline-block;
+	padding:5px 10px;
+	background-color:#c52f30;
+	color:#f1f1f1;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_name>.listname{
+	margin:0 5px;
+	font-size:1rem;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_time{
+	margin:15px 0;
+	padding-left:50px;
+	position:relative;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_time>span{
+	margin:0 5px;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_time>.userpic{
+	display:inline-block;
+	position:absolute;
+	top:50%;left:0;
+	width:30px;
+	height:30px;
+	border:1px solid #dadadc;
+	border-radius:50%;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+	overflow:hidden;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_time>.userpic>a>img{
+	width:100%;
+	height:auto;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_btns>.btn{
+	display:inline-block;
+	margin:0 5px;
+	padding:5px 10px;
+	border:1px solid #dadadc;
+	border-radius:5px;
+	cursor:pointer;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_btns>.btn.playall{
+	margin-right:0;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_btns>.btn.plus{
+	margin-left:0;
+	border-left:none;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_btns>.btn:hover{
+	background-color:#f5f5f7;
+}
+.listcontainer>.listinfo>.info_detailtext>.detail_btns>.btn>.fa{
+	font-size:0.8rem;
+}
+.listcontainer>.listtab>.tabbtns{
+	padding:0 40px;
+	border-bottom:1px solid #c52f30;
+}
+.listcontainer>.listtab>.tabbtns>label{
+	display:inline-block;
+	padding:0.5em 2em;
+	margin:0 3px;
+	border:1px solid #dadadc;
+	border-bottom:none;
+	cursor:pointer;
+}
+.listcontainer>.listtab>.tabbtns>label:hover{
+	background-color:#e3e3e5;
+}
+.listcontainer>.listtab>.tabbtns>label.active{
+	background-color:#c52f30;
+	color:#f1f1f1;
+	border-color:#c52f30;
+}
+.listcontainer>.listtab>.tabbtns>.menu_search{
+	float:right;
+}
+.listcontainer>.listtab>.tabbtns>.menu_search>.search_inp{
+	background-color:#fff;
+	color:#666;
+	border:1px solid #dadadc;
+}
+.listcontainer>.listtab>.tabitem{
+	display:none;
+}
+.listcontainer>.listtab>input{
+	position:fixed;
+	top:0;left:-9999px;
+}
